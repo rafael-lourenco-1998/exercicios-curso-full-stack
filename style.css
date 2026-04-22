@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* importando fonte do google para usar*/
 
@@ -10,24 +9,27 @@
 
 header{
     background-color: #3c63b5;
-    padding: 6px;
+    padding: 20px;
+}
+
+nav.menu > ul{
+    display: flex; /* disposição dos elemtos na tela( sem em bloco ou em linha)*/
+    gap: 50px; /*da um espaço entre os itens (antes definido pelas margens) */
 }
 
 nav.menu li {
-    display: inline-block;  /* Ativa o Flexbox e deixa lado a lado*/
     list-style-type: none;  /* Remove bolinhas da lista */
-    margin: 24px;
 }
 
 nav.menu li > a{
-    color: #ffffff;
+    color: #cccccc;
     text-decoration: none; /* Remove o sublinhado*/
     font-weight: bold; /* Deixa a letra mais grossa*/
     text-transform: uppercase; /* Deixa letra Maiúscula*/
 }
 
 nav.menu li > a:hover{ /* Adiciona efeito quando passa o mouse*/
-    color: rgb(0, 140, 255);
+    color: white;
     text-decoration: underline; /* Adiciona sublinhado*/
 }
 
@@ -36,6 +38,30 @@ section {
     text-align: center; /* Alinha texto no centro*/
     padding: 48px;
     border-bottom: 1px solid #c9c9c9;
+}
+
+section{ /* define um display padão para todas as sections*/
+    display: flex; /* disposição dos elementos na tela(se em bloco ou em linha)*/
+    justify-content: center; /* Define o alinhamento ao longo do eixo principal (horizontal).*/
+    align-items: center; /* alinha os itens no eixo vertical */
+}
+
+section#pagina-inicial{
+    flex-direction: row-reverse; /* define a direção do coteúdo flex (row ou column), reverse( de trás para frente)*/
+}
+
+section#quem-somos{
+    gap: 40px; /*da um espaço entre os itens (antes definido pelas margens) */
+}
+
+section#quem-somos > div{
+    text-align: start; /* alinha o conteúdo de texto no inicio*/
+    width: 38%; /* define uma largura para a div */
+    
+}
+
+section#planos{
+    flex-direction: column; /* define a direção da section flex ( em coluna) */ 
 }
 
 img {
@@ -48,7 +74,7 @@ h2 {
     margin: 12px 0;
 }
 
-button.meu-botao {
+button.botao-padrao {
     background-color: #3c63b5; /* Cor de fundo*/
     color: #ffffff; /* Cor da letra*/
     padding: 18px 48px; /* margem interna*/
@@ -59,17 +85,14 @@ button.meu-botao {
     margin-bottom: 20px;
 }
 
-button.meu-botao:hover{
+button.botao-padrao:hover{
     cursor: pointer; /* Muda o cursor do mouse*/
     font-weight: bold;
 }
 
-
 table{
     border-collapse: collapse; /* Cria Linha inteira nas divisões da tabela*/
-    width: 50%;
-    margin: 0 auto;
-    
+    width: 50%;bo
 }
 td, th {
     border: 1px solid #c9c9c9;
