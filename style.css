@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* importando fonte do google*/
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #3c63b5;
+    color: #ffffff;
+    padding: 6px;
+}
+
+header > p {
+    display: inline-block;/* coloca os elementos lado a lado*/
+    margin: 20px;
+    text-transform: uppercase; /* letra maiúscula*/
+    font-weight: bold; /* deixou a letra mais gordinha*/
+}
+
+main {
+    text-align: center;
+    padding: 48px;
+}
+
+.tamanho-img {
+    width: 35%;
+    height: 35%;
+}
+
+h2 {
+    font-size: 50px;
+    margin: 12px 0;
+}
+
+.meu-botao {
+    background-color: #3c63b5;
+    color: #ffffff;
+    padding: 18px 48px;
+    border-radius: 48px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+hr{
+    border: 1px solid #c8c5c5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: darkgrey;
+}
