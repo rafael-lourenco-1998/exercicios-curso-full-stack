@@ -8,24 +8,35 @@
 </head>
 <body>
     <header>
-        <p>Quem Somos</p>
-        <p>Serviços</p>
-        <p>Planos</p>
-        <p>Contato</p>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#quem-somos">Quem Somos</a>
+                </li>
+                <li>
+                    <a href="#">Serviços</a>
+                </li>
+                <li>
+                    <a href="#planos">Planos</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section>
-            <img src="./images/home.svg" alt="Buscar viagens pelo mundo" class="tamanho-img">
+            <img src="./images/home.svg" alt="Buscar viagens pelo mundo">
             <h2>GrowTravel</h2>
             <p>O melhor serviço para você!</p>
             <button class="meu-botao">Saiba Mais!</button>
         </section>
-        
-        <hr>
 
-        <section>
-            <img src="./images/aeroporto.svg" alt="Aeroporto" class="tamanho-img">
+        
+        <section id="quem-somos">
+            <img src="./images/aeroporto.svg" alt="Aeroporto">
             <h2>Quem Somos</h2>
             <p>
                 Somos apaixonados por criar experiências de viagem inesquecíveis. Nossa agência de turismo é formada por uma equipe
@@ -38,9 +49,68 @@
                 desfrutar de cada momento da sua viagem.
             </p>
         </section>
-    </main>
 
-    <hr>
+
+        <section id="planos">
+            <h2>Planos</h2>
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Plano 1</th>
+                        <th>Plano 2</th>
+                        <th>Plano 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Suporte 24h</th>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <th>Serviços de quarto</th>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <th>Guia turístico</th>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <th>Roteiro de trilhas</th>
+                        <td>❌</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <th>Serviço personalizado</th>
+                        <td>❌</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <th>Área VIP</th>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>✅</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+     <a href="https://wa.me/5551999999999?text=Ol%C3%A1%2C%20tudo%20bem%3F" 
+    title="Contato via whatsapp" target="_blank" id="btn-whats">
+        <img src="./images/whatsapp.png.png" alt="icone whatsapp">
+    </a>
+
+    </main>
 
     <footer>
         <p>&copy; Copyright 2024.</p>
