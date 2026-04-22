@@ -1,3 +1,6 @@
+
+/* CONFIGURANDO A PÁGINA PRIMEIRO PARA DISPOSITIVO MÓVEL (FIRST MOBILE)*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* importando fonte do google para usar*/
 
@@ -8,111 +11,161 @@
 }
 
 header{
-    background-color: #3c63b5;
-    padding: 20px;
-}
-
-nav.menu > ul{
-    display: flex; /* disposição dos elemtos na tela( sem em bloco ou em linha)*/
-    gap: 50px; /*da um espaço entre os itens (antes definido pelas margens) */
+    background-color: #3c63b5; /* Cria cor de fundo */
+    padding: 20px; /* Cria espaço interno*/
 }
 
 nav.menu li {
     list-style-type: none;  /* Remove bolinhas da lista */
+    margin: 12px 0; /* adicionou margem externa nos elemntos (li)*/
 }
 
-nav.menu li > a{
-    color: #cccccc;
+nav.menu li > a {
+    color: white;
     text-decoration: none; /* Remove o sublinhado*/
     font-weight: bold; /* Deixa a letra mais grossa*/
     text-transform: uppercase; /* Deixa letra Maiúscula*/
 }
+/* PARA DISPOSITIVOS MÓVEIS NÃO É NECESSÁRIO CRIA O "HOVER" POIS NÃO TEM MOUSE*/
 
-nav.menu li > a:hover{ /* Adiciona efeito quando passa o mouse*/
-    color: white;
-    text-decoration: underline; /* Adiciona sublinhado*/
+h2{
+    font-size: 50px; /* Tamanho da fonte/letra*/
+    margin: 10px 0 20px 0; /* adicionou margem externa*/
 }
-
 
 section {
     text-align: center; /* Alinha texto no centro*/
-    padding: 48px;
+    padding: 40px 20px; /* cria espaço interno */
     border-bottom: 1px solid #c9c9c9;
-}
-
-section{ /* define um display padão para todas as sections*/
-    display: flex; /* disposição dos elementos na tela(se em bloco ou em linha)*/
-    justify-content: center; /* Define o alinhamento ao longo do eixo principal (horizontal).*/
-    align-items: center; /* alinha os itens no eixo vertical */
-}
-
-section#pagina-inicial{
-    flex-direction: row-reverse; /* define a direção do coteúdo flex (row ou column), reverse( de trás para frente)*/
-}
-
-section#quem-somos{
-    gap: 40px; /*da um espaço entre os itens (antes definido pelas margens) */
-}
-
-section#quem-somos > div{
-    text-align: start; /* alinha o conteúdo de texto no inicio*/
-    width: 38%; /* define uma largura para a div */
-    
-}
-
-section#planos{
-    flex-direction: column; /* define a direção da section flex ( em coluna) */ 
-}
-
-img {
-    width: 35%; /* Dimensões verticais e horizontais*/
-    height: 35%;
-}
-
-h2 {
-    font-size: 50px; /* Tamanho da fonte/letra*/
-    margin: 12px 0;
 }
 
 button.botao-padrao {
     background-color: #3c63b5; /* Cor de fundo*/
-    color: #ffffff; /* Cor da letra*/
+    color: white; /* Cor da letra*/
     padding: 18px 48px; /* margem interna*/
     border-radius: 48px; /* borda arredondada*/
-    border: none;
-    font-size: 15px;
-    margin-top: 20px; /* margem externa superior*/
-    margin-bottom: 20px;
+    border: none; /* Deixa sem borda ou nem precisa colocar no código*/
+    font-size: 15px; /* tamanho da letra*/ 
+    margin: 20px 0; /* Cria margem externa para cima e para baixo*/
 }
 
-button.botao-padrao:hover{
-    cursor: pointer; /* Muda o cursor do mouse*/
-    font-weight: bold;
+section#quem-somos > div > p { /*(P) filha direta da (DIV) que é filha direta da (section#quem-somos) */
+    text-align: start; /* alinha o conteúdo de texto no inicio*/
+    width: 100%; /* define quanto usará da largura disponível para a div */    
+}
+
+div#container-tabela{
+    overflow-x: scroll; /* Cria uma barra de rolagem para a tabela*/
+    width: 100%; /* A tebela ocupa 100% do espaço da div*/
 }
 
 table{
-    border-collapse: collapse; /* Cria Linha inteira nas divisões da tabela*/
-    width: 50%;bo
-}
-td, th {
-    border: 1px solid #c9c9c9;
-    padding: 15px;
-    text-align: center;
+    min-width: 450px; /* tabela com largura min */ 
 }
 
-#btn-whats{ /* cria botão fixo na tela*/
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
+table, td, th {
+    border: 1px solid #cccccc; /* Cria as linhas da tabela */
+    margin: 0 auto; /* Margem externa, pros lados (auto)*/
+    padding: 12px; /*Lagura interna*/
+    text-align: center; /* alinha o texto ao centro*/
+    border-collapse: collapse; /* Tira o espaço entre as linhas tabela, deixando uma única linha*/ 
 }
 
-a#btn-whats > img{ /* (seletor ID) define tamanho da img filha direta da tag (a) com o ID (btn-whats)*/
-    width: 80px;
+tbody th {
+    text-align: left; /* Alinha o texta a esquerda*/ 
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: darkgrey;
-    font-size: 14px;
+a#btn-whats{
+    position: fixed; /* Fixa a posição do botão na tela */
+    bottom: 10px; 
+    right: 10px;
+} /* Bottom e Rigth definem onde o botão vai fixar*/
+
+a#btn-whats > img{ /* tag (a) com ID(#seletor) define o tamanho da filha direta (>img)*/
+    width: 50px; /* largura da img*/
+}
+
+footer{
+    padding: 20px; /*Cria espaço interno*/
+    text-align: center; /* alinha o texto ao centro*/
+    color: #cccccc; /* Cor da letra*/
+    font-size: 14px; /* Tamanho da letra*/
+}
+
+/* RESPOSIVIDADE COM MEDIA QUERIES PARA TELAS MAIORES QUE 768px */
+
+@media screen and (min-width: 768px) { /*Define que tem que ser uma tela(screen) e (and) com largura min 768px*/
+    nav.menu > ul {
+    display: flex; /* disposição dos elementos da (ul) na tela (se em bloco ou em linha)*/
+    gap: 50px; /* Cria um espaço entre os itens (antes definido pelas margens) */
+    }
+
+    div#container-tabela{
+        width: 100%; /* Ocupa 100% do espaço disponível para ela */
+        overflow: hidden; /* Define que não deve ter barra de rolagem (scrool)*/
+    }
+
+    table{ 
+        width: 70%; /* Define que a tabela use 70%  largura do espaço da (DIV) disponível*/
+    }
+}
+
+/* RESPOSIVIDADE COM MEDIA QUERIES PARA TELAS ENTRE 768px À 991px */ 
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /* Se preferir pode usar (section img), que pega todas as (img) que estão dentro de uma (section) */
+    /* Ou se quiser aplicar em uma img expecífica usa ( ID ou CLASS e a TAG) ex: section#quem-somos img */
+    img{ 
+        width: 70%; /* Define que todas as imagens tenham 70% da largura do tamanho da section disponível para ela */
+    }
+
+    section#quem-somos > div {
+        padding: 0 24px; /* Define o espaço interno da (div), 0 pra cima/baixo, e 24px para os lados*/
+    }
+}
+
+/* RESPOSIVIDADE COM MEDIA QUERIES PARA TELAS MAIORES QUE 991px */ 
+
+@media screen and (min-width: 992px) {
+    nav.menu li > a { /* Define uma cor de letra para toda tag(a), que é filha direta de uma (li)*/
+        color: #cccccc; /* que pertence a uma class(menu) dentro de uma (nav)*/
+    }
+
+    nav.menu li > a:hover { /* Adiciona efeito quando passa o mouse*/
+        color: white; /* Muda a cor da letra quando passa o mouse */
+        text-decoration: underline; /* Adiciona sublinhado quando passa o mouse*/ 
+    }
+
+    img {
+        width: 40%; /* Define que todas as imagens tenham 40% da largura do tamanho da section disponível para ela */
+    }
+
+    button.botao-padrao:hover { /* Adiciona efeito quando passa o mouse*/
+        cursor: pointer; /* Muda o cursor do mouse*/
+        font-weight: bold; /* Deixa a letramais grossa*/
+    }
+
+    section { /* define um display padão para todas as sections*/
+    display: flex; /* disposição dos elementos na tela(se em bloco ou em linha)*/
+    justify-content: center; /* Define o alinhamento ao longo do eixo principal (horizontal).*/
+    align-items: center; /* alinha os itens no eixo vertical */
+    }
+
+    section#pagina-inicial { /* Inverte a ordem de exibição dos elementos*/
+    flex-direction: row-reverse; /* define a direção do coteúdo flex (row ou column), reverse( de trás para frente)*/
+    gap: 24px; /* Cria um espaço entre os itens */
+    }
+
+    section#quem-somos {
+        gap: 40px; /* Cria um espaço entre os itens */
+    }
+
+    section#quem-somos > div {
+    text-align: start; /* alinha o conteúdo de texto no inicio*/
+    width: 50%; /* define que a (div) usará 50% da largura do tamanho disponível pela section */
+    }
+
+    section#planos{
+    flex-direction: column; /* define a direção da section flex ( em coluna) */ 
+    }
 }
